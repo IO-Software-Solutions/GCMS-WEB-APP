@@ -1,0 +1,68 @@
+﻿@model WebApp.Models.User
+
+<h4>Create New Admin</h4>
+<hr />
+<div class="row">
+    <div class="col-lg-4 col-md-6 col-12">
+        <form asp-action="CreateAdmin">
+            <div class="row mb-2">
+                <div class="col">
+                    <input asp-for="Firstname" placeholder="Firstname" class="form-control form-control-sm" required />
+                </div>
+            </div>
+
+            <div class="row mb-2">
+                <div class="col">
+                    <input asp-for="Middlename" placeholder="Middlename" class="form-control form-control-sm" />
+                </div>
+            </div>
+
+            <div class="row mb-2">
+                <div class="col">
+                    <input asp-for="Lastname" placeholder="Surname" class="form-control form-control-sm" required />
+                </div>
+            </div>
+
+            <div class="row mb-2">
+                <div class="col">
+                    <textarea asp-for="Address" placeholder="Residential Address" class="form-control form-control-sm" rows="3" required></textarea>
+                </div>
+            </div>
+
+            <div class="row mb-2">
+                <div class="col">
+                    <input asp-for="Phone" placeholder="Contact Number (e.g 0791234789)" type="number" class="form-control form-control-sm" required />
+                </div>
+            </div>
+
+            <div class="row mb-2">
+                <div class="col">
+                    <input asp-for="Email" placeholder="Email" type="email" class="form-control form-control-sm" required />
+                </div>
+            </div>
+
+            <div class="row mb-2">
+                <div class="col">
+                    <input asp-for="Password" placeholder="Password" type="password" class="form-control form-control-sm" required />
+                </div>
+            </div>
+
+            <div class="row mb-2">
+                <div class="col">
+                    <input asp-for="Password" placeholder="Confirm Password" type="password" class="form-control form-control-sm" required />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <input type="button" value="Back" class="btn btn-sm btn-secondary w-100" />
+                </div>
+
+                <div class="col-6">
+                    <input type="submit" value="Create" class="btn btn-sm btn-primary w-100" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

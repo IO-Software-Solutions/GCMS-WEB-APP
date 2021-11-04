@@ -9,18 +9,18 @@ using WebApp.Models;
 
 namespace WebApp.Controllers
 {
-    public class HomeController : Controller
+    public class DashboardController : Controller
     {
         private readonly DataContext db;
 
-        public HomeController(DataContext db)
+        public DashboardController(DataContext db)
         {
             this.db = db;
         }
 
         public IActionResult Index()
         {
-            return View(db.Roles.Find(1));
+            return View(db.Roles.Find(new Random().Next(1, 4)));
         }
     }
 }
