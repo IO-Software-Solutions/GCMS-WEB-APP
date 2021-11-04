@@ -2,24 +2,18 @@
 @{
     ViewData["Title"] = "Account";
 }
-
-<h3>Account</h3>
-
-<hr />
-
 <div id="account">
 
-    <div class="row">
+    <div class="row mb-2">
         <div class="col-lg-4 col-md-6 col-12">
-            <button type="button" onclick="GetAccountSection('account/create/admin/form')" class="btn btn-sm btn-primary w-100">New Admin</button>
+            <button type="button" onclick="GetAccountSection('account/login/form', 'account')" class="btn btn-sm btn-primary w-100">Login</button>
         </div>
     </div>
 
     <div class="row">
         <div class="col-lg-4 col-md-6 col-12">
-
+            <button type="button" onclick="GetAccountSection('account/register/form', 'account')" class="btn btn-sm btn-primary w-100">New Admin</button>
         </div>
     </div>
 
 </div>
-

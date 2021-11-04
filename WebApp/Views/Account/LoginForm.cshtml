@@ -1,0 +1,42 @@
+﻿@model WebApp.ViewModels.Pair<string, string>
+
+<h4>Login</h4>
+
+<hr />
+<div class="row">
+    <div class="col-lg-4 col-md-6 col-12">
+        <form asp-action="Login">
+            <div id="alert" class="form-group mb-2">
+                <!--Alert-->
+            </div>
+
+            <div class="row mb-2">
+                <div class="col">
+                    <input asp-for="Key" placeholder="Email" class="form-control form-control-sm w-100" type="email" />
+                </div>
+            </div>
+
+            <div class="row mb-2">
+                <div class="col">
+                    <input asp-for="Value" placeholder="Password" class="form-control form-control-sm w-100" type="password" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <input type="button" onclick="GetAccountSection('account/register/form', 'account')" value="Register" class="btn btn-sm btn-secondary w-100" />
+                </div>
+
+                <div class="col-6">
+                    <input onclick="PostAccountData('account/login', '', 'alert')" type="button" value="Login" class="btn btn-sm btn-primary w-100" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <a href="javascript:void(0)" onclick="GetAccountSection('account/forgot/form', 'account')" class="text-decoration-none">Forgot Password</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

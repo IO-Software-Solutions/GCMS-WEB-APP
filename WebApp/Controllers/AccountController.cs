@@ -23,17 +23,17 @@ namespace WebApp.Controllers
             return View();
         }
 
-        [Route("account/create/admin/form")]
+        [Route("account/register/form")]
         public IActionResult CreateAdminForm()
         {
             return PartialView(new User());
         }
 
-        [Route("account/create/admin")]
-        public IActionResult CreateAdmin([FromBody] User user)
+        [HttpPost("account/register")]
+        public IActionResult CreateAdmin()
         {
-            System.Diagnostics.Debug.WriteLine(user.Firstname);
-            return PartialView();
+            var status = new Pair<string, string>("danger", "Could Not Reset Password.");
+            return PartialView("_StatusAlert", status);
         }
 
         [Route("account/login/form")]
@@ -42,34 +42,37 @@ namespace WebApp.Controllers
             return PartialView();
         }
 
-        [Route("account/login")]
-        public IActionResult Login([FromBody] Pair<string, string> credentials)
+        [HttpPost("account/login")]
+        public IActionResult Login()
         {
-            return PartialView();
+            var status = new Pair<string, string>("warning", "Could Not Reset Password.");
+            return PartialView("_StatusAlert", status);
         }
 
         [Route("account/forgot/form")]
-        public IActionResult ForgotPasswordForm()
+        public IActionResult ForgotForm()
         {
             return PartialView();
         }
 
-        [Route("account/forgot")]
-        public IActionResult Forgot([FromBody] Pair<string, string> credentials)
+        [HttpPost("account/forgot")]
+        public IActionResult Forgot()
         {
-            return PartialView();
+            var status = new Pair<string, string>("info", "Could Not Reset Password.");
+            return PartialView("_StatusAlert", status);
         }
 
         [Route("account/reset/form")]
-        public IActionResult ResetPasswordForm()
+        public IActionResult ResetForm()
         {
             return PartialView();
         }
 
-        [Route("account/reset")]
-        public IActionResult ResetPassword([FromBody] Pair<string, string> credentials)
+        [HttpPost("account/reset")]
+        public IActionResult Reset()
         {
-            return PartialView();
+            var status = new Pair<string, string>("danger", "Could Not Reset Password.");
+            return PartialView("_StatusAlert", status);
         }
     }
 }

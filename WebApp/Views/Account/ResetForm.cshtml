@@ -1,0 +1,47 @@
+﻿@model WebApp.ViewModels.Pair<string, string>
+
+<script>
+    let json = '{"Key": "12585", "Value": "password"}';
+</script>
+
+<h4>Reset Password</h4>
+
+<hr />
+
+<div class="row">
+    <div class="col-lg-4 col-md-6 col-12">
+        <form asp-action="Reset">
+            <div id="alert" class="form-group mb-2">
+                <!--Alert-->
+            </div>
+
+            <div class="row mb-2">
+                <div class="col">
+                    <input asp-for="Key" placeholder="Reset Code" class="form-control form-control-sm w-100" type="number" />
+                </div>
+            </div>
+
+            <div class="row mb-2">
+                <div class="col">
+                    <input asp-for="Value" placeholder="Password" class="form-control form-control-sm w-100" type="password" />
+                </div>
+            </div>
+
+            <div class="row mb-2">
+                <div class="col">
+                    <input placeholder="Confirm Password" class="form-control form-control-sm w-100" type="password" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <input type="button" onclick="GetAccountSection('account/forgot/form', 'account')" value="Back" class="btn btn-sm btn-secondary w-100" />
+                </div>
+
+                <div class="col-6">
+                    <input type="button" onclick='PostAccountData("account/reset", "{\"Key\": \"12585\", \"Value\": \"password\"}", "alert")' value="Reset" class="btn btn-sm btn-primary w-100" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

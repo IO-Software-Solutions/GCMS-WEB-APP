@@ -1,10 +1,16 @@
 ﻿@model WebApp.Models.User
 
-<h4>Create New Admin</h4>
+<h4>Create New Account</h4>
+
 <hr />
+
 <div class="row">
     <div class="col-lg-4 col-md-6 col-12">
         <form asp-action="CreateAdmin">
+            <div id="alert" class="form-group mb-2">
+                <!--Alert-->
+            </div>
+
             <div class="row mb-2">
                 <div class="col">
                     <input asp-for="Firstname" placeholder="Firstname" class="form-control form-control-sm" required />
@@ -55,11 +61,11 @@
 
             <div class="row">
                 <div class="col-6">
-                    <input type="button" value="Back" class="btn btn-sm btn-secondary w-100" />
+                    <input type="button" onclick="GetAccountSection('account/login/form', 'account')" value="Login" class="btn btn-sm btn-secondary w-100" />
                 </div>
 
                 <div class="col-6">
-                    <input type="submit" value="Create" class="btn btn-sm btn-primary w-100" />
+                    <input onclick="PostAccountData('account/register', '', 'alert')" type="submit" value="Register" class="btn btn-sm btn-primary w-100" />
                 </div>
             </div>
         </form>

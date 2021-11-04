@@ -1,0 +1,30 @@
+﻿@model WebApp.ViewModels.Pair<string, string>
+
+<h4>Forgot Password</h4>
+
+<hr />
+<div class="row">
+    <div class="col-lg-4 col-md-6 col-12">
+        <form asp-action="Forgot">
+            <div id="alert" class="form-group mb-2">
+                <!--Alert-->
+            </div>
+
+            <div class="row mb-2">
+                <div class="col">
+                    <input asp-for="Key" placeholder="Email" class="form-control form-control-sm w-100" type="email" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <input type="button" onclick="GetAccountSection('account/login/form', 'account')" value="Back" class="btn btn-sm btn-secondary w-100" />
+                </div>
+
+                <div class="col-6">
+                    <input type="button" onclick="GetAccountSection('account/reset/form', 'account')" value="Send Reset Code" class="btn btn-sm btn-primary w-100" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
