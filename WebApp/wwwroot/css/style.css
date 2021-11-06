@@ -1,5 +1,50 @@
 ﻿.body {
-    background-image: linear-gradient(to top right, lightblue, gray);
+    /*background-image: linear-gradient(to top right, lightblue, gray);*/
+}
+#dashboard {
+    background-color: lightblue;
+}
+
+.side-bar {
+    margin: 0;
+    padding: 0;
+    width: 220px;
+    height: 100vh;
+    background-color: lightblue;
+    position: fixed;
+    overflow: auto;
+}
+
+.side-bar a {
+    display: block;
+    color: gray;
+    padding: 17px;
+    text-decoration: none;
+}
+
+.side-bar a:hover {
+    background-color: aquamarine;
+    color: black;
+}
+
+div.content {
+    margin-left: 220px;
+    padding: 0 5px;
+    height: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .side-bar {
+        width: auto;
+    }
+
+        .side-bar a span.link-text {
+            display: none;
+        }
+
+    div.content {
+        margin-left: 50px;
+    }
 }
 
 /* Chrome, Safari, Edge, Opera */

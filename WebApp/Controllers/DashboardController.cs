@@ -20,7 +20,7 @@ namespace WebApp.Controllers
 
         public IActionResult Index()
         {
-            return View(db.Roles.Find(new Random().Next(1, 4)));
+            return View();
         }
     }
 }
